@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components'
+import styled from "styled-components"
 import logo from "../../assets/images/logo.svg";
 import { colorPrimario } from "../UI/Variables";
 
@@ -18,24 +18,26 @@ const Logo = styled.img`
 `
 
 const BtnHeader = styled.a`
-  text-align: center;
-  border-radius: 3px;
-  padding: 5px 20px;
-  margin: 0 10px;
-  font-weight: 600;
-  border: 2px solid white;
-  color: ${(props) => props.primary ? colorPrimario : 'White'};
-  background-color: ${(props) => props.primary ? 'White' : 'trasparent'};
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px 20px;
+    margin: 0 10px;
+    font-weight: 600;
+    border: 2px solid white;
+    color: ${({ primary }) => primary ? "white" : colorPrimario};
+    background: ${(props) => props.primary ? "transparent" : "white"};
 `
+
+
 const Header = () => {
   return (
     <StyledHeader>
       <Logo src={logo} alt="Logo Smart Bank" />
       <div>
-        <BtnHeader primary href="https://google.com">
+        <BtnHeader href="https://google.com">
           Ayuda
         </BtnHeader>
-        <BtnHeader href="https://google.com">
+        <BtnHeader primary href="https://google.com">
           Salir
         </BtnHeader>
       </div>
